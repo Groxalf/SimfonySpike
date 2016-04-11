@@ -11,6 +11,6 @@ class DefaultController extends Controller
 
         return $this->render(
             'EventBundle:Default:index.html.twig',
-            ['name' => $name]);
+            ['name' => $name, 'count' => $count]);
     }
 }
