@@ -1,9 +1,9 @@
 <?php
 
-namespace AppBundle;
+namespace EventBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class AppBundle extends Bundle
+class EventBundle extends Bundle
 {
 }
