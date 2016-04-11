@@ -8,9 +8,8 @@ class DefaultController extends Controller
 {
     public function indexAction($count, $name)
     {
-        $templating = $this->container->get('templating');
 
-        return $templating->renderResponse(
+        return $this->render(
             'EventBundle:Default:index.html.twig',
             ['name' => $name]);
     }
