@@ -8,9 +8,13 @@ class DefaultController extends Controller
 {
     public function indexAction($count, $name)
     {
+        $em = $this->getDoctrine()->getManager();
+        $repo = $em->getRepository('EventBundle:Event');
+
+        $event = $repo->findOneBy(['name' => 'Darth\'s surprise birthday party!']);
 
         return $this->render(
             'EventBundle:Default:index.html.twig',
-            ['name' => $name, 'count' => $count]);
+            ['name' => $name, 'count' => $count,'event' => $event]);
     }
 }
